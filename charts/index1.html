@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>定位桩</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <style>
+      #three-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        outline: none;
+      }
+
+      #file-input {
+        z-index: 1;
+        position: absolute;
+      }
+
+      .message-container {
+        z-index: 1;
+        position: absolute;
+        margin: 20px;
+        background-image: -moz-linear-gradient(
+          top,
+          #e32c0e,
+          #b50101
+        ); /* Firefox */
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0, #e32c0e),
+          color-stop(1, #b50101)
+        ); /* Saf4+, Chrome */
+        display: inline-block;
+        padding: 30px;
+      }
+
+      .message {
+        display: inline;
+        color: white;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background: url(../images/main-bg.png) no-repeat center;
+      -webkit-background-size: 100% 100%;
+      background-size: 100% 100%;
+    "
+  >
+    <div class="index-topdiv">
+      <a href="../监控.html" target="main"
+        ><div class="message-container">
+          <h1 class="message">信息:</h1>
+          <h1 class="message" id="id-output">None</h1>
+        </div>
+        <canvas id="three-canvas"></canvas>
+        <script src="bundle.js"></script
+      ></a>
+
+      <div class="left-top">
+        <h2>定位桩模型</h2>
+        <br />
+        <p>定位桩模型</p>
+        <p class="txtorg"></p>
+        <br />
+        <h2></h2>
+        <p class="numbox">定位桩模型</p>
+      </div>
+    </div>
+
+    <script src="../js/echarts-all.js"></script>
+  </body>
+</html>

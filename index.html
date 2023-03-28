@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>定位桩</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <header class="iframe-header">
+      <h1 class="fl"><img src="images/chuan.png" class="fl" />定位桩</h1>
+      <ul class="fr header-user">
+        <li class="fl h-inquire">
+          <input placeholder="搜索" class="fl" /><i class="icon fl"></i>
+        </li>
+      </ul>
+    </header>
+    <div class="iframe-content">
+      <div class="fl iframe-menu">
+        <ul class="iframe-menu-option">
+          <a href="main.html" target="main"
+            ><li class="btn-blue"><i class="icon icon1"></i>模型分析</li></a
+          >
+          <a href="监控.html" target="main"
+            ><li><i class="icon icon2"></i>监控</li></a
+          >
+          <a href="视频与图片-视频.html" target="main"
+            ><li><i class="icon icon3"></i>视频与图片</li></a
+          >
+          <a href="模块4.html" target="main"
+            ><li><i class="icon icon4"></i>模块4</li></a
+          >
+          <a href="模块5.html" target="main"
+            ><li><i class="icon icon5"></i>模块5</li></a
+          >
+        </ul>
+      </div>
+      <div class="fl iframe-right-content">
+        <iframe src="main.html" id="main" name="main"></iframe>
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      setIframeSize();
+      $(".iframe-menu-option li").each(function () {
+        $(this).click(function () {
+          $(".iframe-menu-option li").removeClass("btn-blue");
+          $(this).addClass("btn-blue");
+        });
+      });
+    });
+    function setIframeSize() {
+      var wHeight = $(document).height();
+      var rHeight = wHeight - 60;
+      $(".iframe-right-content").height(rHeight);
+      $(".iframe-right-content").width($(".iframe-right-content").width() - 1);
+    }
+  </script>
+</html>
